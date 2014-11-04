@@ -106,4 +106,5 @@ p {
 .checked {
 	text-decoration: line-through;
 	background-color: #b0b0b0;
+	color: #fff;
 }
