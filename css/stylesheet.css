@@ -44,6 +44,7 @@ h1{
 	display:inherit;
 	font-family: sans-serif;
 	font-size: 19px;
+	color: white;
 }
 
 button {
@@ -77,13 +78,28 @@ input[type=text]:focus {
 }
 
 p {
-	background-color: #a1a1a1;
+	background-color: #fff;
 	border-radius: 10px;
-	color: #fff;
+	border: 1px solid #a1a1a1;
+	color: #999;
 	font-size: 17px;
 	margin: 15px auto;
 	padding: 0 15px;
 }
 
+.delete {
+	float: right;
+	width: 30px;
+	height: 30px;
+	background-image: url('../images/delete.svg');
+	cursor: pointer;
+}
 
+.check {
+	float: left;
+	width: 30px;
+	height: 30px;
+	background-image: url('../images/check.svg');
+	cursor: pointer;
+}
 

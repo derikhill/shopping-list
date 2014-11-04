@@ -9,7 +9,7 @@ $('#enter-items').keydown(function(event){
 
 	function addListItem() {
 		var text = $('#enter-items').val();
-		$('#item-list').append('<p class="new-item">' + text + '</p>');
+		$('#item-list').prepend('<p class="new-item">' + check + text + done + '</p>');
 		$('#enter-items').val('');
 		$('#item-list')	
 		.css('opacity', "0")
@@ -26,5 +26,13 @@ $('#enter-items').keydown(function(event){
 
 	$(function() {
 		$('.add').on('click', addListItem);
-	}); 	
+	});
+
+	$('document').on('click', '.delete', function() {
+		$(this).closest('p').fadeOut(400);
+	});
+
+	var check = '<span class="check"></span>'
+	var done = '<span class="delete"></span>'
+	
 });
