@@ -70,7 +70,7 @@ input[type=text]:focus {
 	text-align: center;
 }
 
-.new-item {
+.new-item, .checked{
 	width: 500px;
 	height:34px;
 	border-radius: 10px;
@@ -82,12 +82,12 @@ p {
 	border-radius: 10px;
 	border: 1px solid #a1a1a1;
 	color: #999;
-	font-size: 17px;
+	font-size: 19px;
 	margin: 15px auto;
 	padding: 0 15px;
 }
 
-.delete {
+.deleted {
 	float: right;
 	width: 30px;
 	height: 30px;
@@ -103,3 +103,7 @@ p {
 	cursor: pointer;
 }
 
+.checked {
+	text-decoration: line-through;
+	background-color: #b0b0b0;
+}

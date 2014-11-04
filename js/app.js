@@ -1,4 +1,4 @@
-$(document).ready(function() {	
+$(document).ready(function() {
 
 $('#enter-items').keydown(function(event){
 		if(event.keyCode == 13) {
@@ -6,6 +6,9 @@ $('#enter-items').keydown(function(event){
 			$('.add').click();
 		};
 	});
+
+	var check = '<span class="check"></span>'
+	var done = '<span class="deleted"></span>'
 
 	function addListItem() {
 		var text = $('#enter-items').val();
@@ -28,11 +31,23 @@ $('#enter-items').keydown(function(event){
 		$('.add').on('click', addListItem);
 	});
 
-	$('document').on('click', '.delete', function() {
-		$(this).closest('p').fadeOut(400);
+    $(document).on('click', '.check', function() {
+    var itemSelected = $(this).closest("p");
+    itemSelected.addClass('checked').removeClass('new-item')
+    .fadeIn("slow");
 	});
 
-	var check = '<span class="check"></span>'
-	var done = '<span class="delete"></span>'
-	
+    $(document).on('click', '.checked', function() {
+    var itemSelected = $(this).closest("p");
+    itemSelected.removeClass('checked').addClass('new-item')
+    .fadeIn("slow");
+	});
+
+    $(document).on('click', '.deleted', function() {
+    console.log('Removing item');
+    $(this).closest("p").hide(500, function() {
+      $(this).closest("p").remove();
+    });
+  });
+
 });
